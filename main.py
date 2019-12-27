@@ -58,7 +58,7 @@ phone = 981999999
 
 
 def mkstaff(tablename,rows):
-    tblsql = str("/'sqlfiles/"+tablename + ".sql")
+    tblsql = str("sqlfiles/"+tablename + ".sql")
     w = open(tblsql,'w')
     global serialnum
     global phone
@@ -80,7 +80,7 @@ def mkstaff(tablename,rows):
         phone -= 1
 
 def mkpatient(tablename, rows, no_null):
-    tblsql = str("/'sqlfiles/"+tablename + ".sql")
+    tblsql = str("sqlfiles/"+tablename + ".sql")
     number_null = no_null
     w = open(tblsql,'w')
     global serialnum
@@ -105,7 +105,7 @@ def mkpatient(tablename, rows, no_null):
         phone -= 1
 
 def mkbilling(tablename, rows):
-    tblsql = str("/'sqlfiles/"+tablename + ".sql")
+    tblsql = str("sqlfiles/"+tablename + ".sql")
     w = open(tblsql,'w')
     global serialnum
     for i in range(rows):
@@ -118,7 +118,7 @@ def mkbilling(tablename, rows):
         serialnum +=1 
 
 def mkmedicine_batch(tablename, rows):
-    tblsql = str("/'sqlfiles/"+tablename + ".sql")
+    tblsql = str("sqlfiles/"+tablename + ".sql")
     w = open(tblsql,'w')
     global chosen_med
     for i in range(rows):
@@ -131,7 +131,7 @@ def mkmedicine_batch(tablename, rows):
         w.write(');\n')
 
 def mkmedicine_bill(tablename, rows):
-    tblsql = str("/'sqlfiles/"+tablename + ".sql")
+    tblsql = str("sqlfiles/"+tablename + ".sql")
     w = open(tblsql,'w')
     for i in range(rows):
         w.write('INSERT INTO ' + tablename + ' VALUES (\n')
@@ -142,7 +142,7 @@ def mkmedicine_bill(tablename, rows):
 
 
 def mktreatment(tablename, rows):
-    tblsql = str("/'sqlfiles/"+tablename + ".sql")
+    tblsql = str("sqlfiles/"+tablename + ".sql")
     w = open(tblsql,'w')
     global chosen_t
     for i in range(rows):
@@ -155,7 +155,7 @@ def mktreatment(tablename, rows):
         w.write(');\n')
 
 def mkdepartment(tablename,rows):
-    tblsql = str("/'sqlfiles/"+tablename + ".sql")
+    tblsql = str("sqlfiles/"+tablename + ".sql")
     w = open(tblsql,'w')
     global phone
     global chosen_d
@@ -171,7 +171,7 @@ def mkdepartment(tablename,rows):
         phone -=1
 
 def mkappointment(tablename,rows):
-    tblsql = str("/'sqlfiles/"+tablename + ".sql")
+    tblsql = str("sqlfiles/"+tablename + ".sql")
     w = open(tblsql,'w')
     global serialnum
     global chosen_d
@@ -187,7 +187,7 @@ def mkappointment(tablename,rows):
            
 
 def mkappointmentitem(tablename, rows):
-    tblsql = str("/'sqlfiles/"+tablename + ".sql")
+    tblsql = str("sqlfiles/"+tablename + ".sql")
     w = open(tblsql,'w')
     global serialnum
     global chosen_t
